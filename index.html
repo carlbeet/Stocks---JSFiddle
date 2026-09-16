@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Untitled fiddle</title>
+
+  <style>
+    
+  </style>
+
+  
+</head>
+<body>
+  <!DOCTYPE html>
+<html>
+  <head> 
+
+    </head>
+    <body>
+      <button name= "Check stock levels" id="btn1" onclick="checkStock()"> Check Stock Levels </button>
+      <div id='div1' > </div>
+
+      </body>
+      </html>
+
+
+  <script>
+    
+array = [
+  {product: "pants", stock: "20"},
+  {product: "shirts", stock: "30"},
+  {product: "shorts", stock: "10"}
+
+]
+
+stockVal = 0;
+const listContainer = document.getElementById('div1');
+const fragment = document.createDocumentFragment();
+function checkStock() {
+  array.forEach(element => {
+
+    var stockVal = element.stock;
+    const newVal = document.createElement("div");
+    newVal.textContent = stockVal;
+
+    fragment.appendChild(newVal);
+  
+  if (stockVal > 0) {
+    console.log( element.product + "is in stock")
+  }
+  else {
+    console.log(element.product "out of stock")
+  }
+  })
+  listContainer.appendChild(fragment);
+
+}
+
+
+  </script>
+</body>
+</html>
